@@ -1,0 +1,104 @@
+// Required
+@import "../bootstrap/scss/functions";
+
+// Default variable overrides
+// Colors
+$primary: lightseagreen;
+$primary-shaded: shade-color($primary, 20%);
+$light: #e9ecef; // $gray-200
+
+// Global option
+$enable-rounded: false;
+
+// Container
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1500px
+);
+$grid-gutter-width: 1rem;
+
+// Required
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/maps";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/root";
+
+// Variable value using existing variable
+// Typography
+$headings-color: $primary;
+$text-muted: $primary-shaded;
+$small-font-size: 0.7em;
+
+// Navbar
+$navbar-light-brand-color: $primary;
+$navbar-light-brand-hover-color: $primary-shaded;
+$navbar-brand-font-size: $h3-font-size;
+
+// Carousel
+$carousel-indicator-width: 20px;
+$carousel-indicator-height: 10px;
+$carousel-indicator-spacer: 10px;
+
+// Image thumbnail
+$thumbnail-border-color: $primary;
+$thumbnail-border-width: 2px;
+$thumbnail-padding: 4px;
+
+// Figure
+$figure-caption-color: $primary-shaded;
+$figure-caption-font-size: $small-font-size;
+
+// Optional Bootstrap CSS
+@import "../bootstrap/scss/reboot";
+@import "../bootstrap/scss/type";
+@import "../bootstrap/scss/images";
+@import "../bootstrap/scss/containers";
+@import "../bootstrap/scss/grid";
+@import "../bootstrap/scss/tables";
+@import "../bootstrap/scss/forms";
+@import "../bootstrap/scss/buttons";
+@import "../bootstrap/scss/transitions";
+@import "../bootstrap/scss/dropdown";
+@import "../bootstrap/scss/button-group";
+@import "../bootstrap/scss/nav";
+@import "../bootstrap/scss/navbar";
+@import "../bootstrap/scss/card";
+@import "../bootstrap/scss/accordion";
+@import "../bootstrap/scss/breadcrumb";
+@import "../bootstrap/scss/pagination";
+@import "../bootstrap/scss/badge";
+@import "../bootstrap/scss/alert";
+@import "../bootstrap/scss/progress";
+@import "../bootstrap/scss/list-group";
+@import "../bootstrap/scss/close";
+@import "../bootstrap/scss/toasts";
+@import "../bootstrap/scss/modal";
+@import "../bootstrap/scss/tooltip";
+@import "../bootstrap/scss/popover";
+@import "../bootstrap/scss/carousel";
+@import "../bootstrap/scss/spinners";
+@import "../bootstrap/scss/offcanvas";
+@import "../bootstrap/scss/placeholders";
+
+// Helpers
+@import "../bootstrap/scss/helpers";
+
+// Utilities
+@import "../bootstrap/scss/utilities";
+
+// Utilities API
+@import "../bootstrap/scss/utilities/api";
+
+// Custom CSS overrides
+// Navbar
+.navbar-brand {
+  font-weight: $font-weight-bold;
+}
+
+// Figure
+.figure-img {
+  margin-bottom: 0;
+}

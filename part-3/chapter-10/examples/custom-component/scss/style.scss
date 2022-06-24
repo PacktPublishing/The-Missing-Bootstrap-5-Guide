@@ -1,0 +1,75 @@
+// Bootstrap 5
+@import "../bootstrap/scss/bootstrap.scss";
+
+.timeline {
+  @include list-unstyled;
+  margin: $spacer 0;
+}
+.timeline-item {
+  padding-bottom: $spacer;
+  border-left: $border-width solid $border-color;
+  position: relative;
+  padding-left: $spacer;
+  margin-left: .625rem;
+
+  &:last-child{
+    border: 0;
+    padding-bottom: 0;
+  }
+
+  &::before {
+    content: '';
+    width: 1.2rem;
+    height: 1.2rem;
+    background: $white;
+    border: $border-width solid $border-color;
+    @include box-shadow($box-shadow-inset);
+    border-radius: 50%;
+    position: absolute;
+    left: -.6rem;
+    top: 0;
+  }
+}
+.timeline-time {
+  font-weight: $font-weight-bold;
+  top: -0.1875rem;
+  position: relative;
+}
+.timeline-text {
+  margin-bottom: 0;
+}
+
+@each $state, $value in $theme-colors {
+  .timeline-item-#{$state} {
+    border-color: $value;
+    
+    &::before {
+      border-color: $value;
+    }
+    
+    .timeline-time {
+      color: $value;
+    }
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .timeline-horizontal#{$infix} {
+      display: flex;
+      padding-top: 0.6rem;
+      overflow-y: scroll;
+
+      .timeline-item {
+        border-left: none;
+        border-top: $border-width solid $border-color;
+
+        &::before {
+          top: -0.6rem;
+        }
+      }
+    }
+  }
+}

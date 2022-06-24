@@ -1,0 +1,27 @@
+// Bootstrap 5
+@import "../bootstrap/scss/bootstrap.scss";
+
+.up {
+  display: none;
+  @include media-breakpoint-up(lg) {
+    display: block;
+  };
+}
+.down {
+  display: none;
+  @include media-breakpoint-down(md) {
+    display: block;
+  };
+}
+.between {
+  display: none;
+  @include media-breakpoint-between(md, xl) {
+    display: block;
+  };
+}
+.only {
+  display: none;
+  @include media-breakpoint-only(sm) {
+    display: block;
+  };
+}

@@ -1,0 +1,27 @@
+// Bootstrap 5
+@import "../bootstrap/scss/bootstrap.scss";
+
+body {
+  @include make-container();
+}
+main {
+  @include make-row();
+}
+nav {
+  @include make-col-ready();
+  @include media-breakpoint-up(lg) {
+   @include make-col(3);
+  }
+}
+article {
+  @include make-col-ready();
+  @include media-breakpoint-up(lg) {
+    @include make-col(6);
+  }
+}
+aside {
+  @include make-col-ready();
+  @include media-breakpoint-up(lg) {
+    @include make-col(3);
+  }
+}

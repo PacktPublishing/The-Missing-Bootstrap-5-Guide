@@ -1,0 +1,6 @@
+// Bootstrap 5
+@import "../bootstrap/scss/bootstrap.scss";
+
+.box {
+  @include padding(3rem);
+}

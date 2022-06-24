@@ -1,0 +1,84 @@
+// COLORS
+// Color palette
+$primary: #0464a1;
+$secondary: #adb5bd; // = $gray-500
+$success: #2A9D8F;
+$info: #E9C46A;
+$warning: #F4A261;
+$danger: #E76F51;
+$light: #dee2e6; // = $gray-300
+$dark: #343a40; // $gray-800
+
+// GLOBAL OPTIONS
+// Shadows
+$enable-shadows: true;
+
+// GLOBAL VARIABLES
+// Spacer
+$spacer: 1.5rem;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 2,
+  5: $spacer * 4,
+);
+
+// Border radius
+$border-radius: .5rem;
+$border-radius-sm: .25rem;
+$border-radius-lg: .75rem;
+
+// LAYOUT
+// Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 616px,
+  md: 808px,
+  lg: 1032px,
+  xl: 1240px,
+  xxl: 1440px
+);
+
+// Container
+$container-max-widths: (
+  sm: 580px,
+  md: 760px,
+  lg: 1000px,
+  xl: 1180px,
+  xxl: 1360px
+);
+
+// FORMS
+// Inputs and buttons
+$input-btn-padding-y: .5rem;
+$input-btn-padding-x: 1em;
+
+// COMPONENTS
+// Breadcrumb
+$breadcrumb-divider: quote("–");
+
+// Carousel
+$carousel-control-icon-width: 4rem;
+$carousel-indicator-height: 10px;
+$carousel-indicator-spacer: 10px;
+
+// Dropdown
+$dropdown-min-width: 0;
+
+// Modal
+$modal-lg: 900px;
+$modal-backdrop-opacity: .75;
+$modal-fade-transform: rotate(5deg) scale(.9);
+
+// Navs
+$nav-link-padding-y: 1rem;
+
+// Progress
+$progress-height: 2rem;
+$progress-bar-animation-timing: .5s linear infinite;
+$progress-bar-transition: width .4s ease;
+
+// Spinner
+$spinner-animation-speed: 1s;

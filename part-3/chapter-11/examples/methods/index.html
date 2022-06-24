@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Methods</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="my-5">
+        <h2>Default</h2>
+        <p>Badge with tooltip triggered on hover and focus.<br>Options: <code>placement</code> set to <code>bottom</code>.</p>
+        <div class="badge bg-secondary" id="tooltipDefault" title="Default tooltip">Badge with default tooltip</div>
+      </div>
+      
+      <div class="my-5">
+        <h2>On load</h2>
+        <p>Badge with tooltip triggered on load.<br>Options: <code>trigger</code> set to <code>manual</code> and <code>placement</code> set to <code>bottom</code>.</p>
+        <div class="badge bg-secondary" id="tooltipOnLoad" title="Tooltip triggered on load">Badge with tooltip triggered on load</div>
+      </div>
+      
+      <div class="my-5">
+        <h2>On click</h2>
+        <p>Badge with tooltip toggled on button click.<br>Options: <code>trigger</code> set to <code>manual</code> and <code>placement</code> set to <code>bottom</code>.</p>
+        <button type="button" id="triggerForTooltip" class="btn btn-secondary mb-4">Trigger for tooltip</button><br>
+        <div class="badge bg-secondary" id="tooltipOnButtonClick" title="Tooltip toggled on button click">Badge with tooltip toggled on button click</div>
+      </div>
+
+    </div>
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

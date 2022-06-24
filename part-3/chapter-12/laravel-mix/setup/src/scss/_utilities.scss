@@ -1,0 +1,82 @@
+// Make sizing utilities for width responsive and add extra values
+$utilities: map-merge(
+  $utilities,
+  (
+    "width": (
+      property: width,
+      responsive: true,
+      class: w,
+      values: (
+        25: 25%,
+        33: 33%,
+        50: 50%,
+        67: 67%,
+        75: 75%,
+        100: 100%,
+        auto: auto
+      )
+    )
+  )
+);
+
+// Make border utilities for border-width, border-bottom and border-end responsive
+$utilities: map-merge(
+  $utilities, (
+    "border-width": map-merge(
+      map-get($utilities, "border-width"),
+      ( responsive: true ),
+    ),
+    "border-bottom": map-merge(
+      map-get($utilities, "border-bottom"),
+      ( responsive: true ),
+    ),
+    "border-end": map-merge(
+      map-get($utilities, "border-end"),
+      ( responsive: true ),
+    ),
+  )
+);
+
+// Remove unused utilities
+$utilities: map-merge(
+  $utilities,
+  (
+    "align": null,
+    "opacity": null,
+    "overflow": null,
+    "shadow": null,
+    "start": null,
+    "translate-middle": null,
+    "max-width": null,
+    "viewport-width": null,
+    "min-viewport-width": null,
+    "max-height": null,
+    "viewport-height": null,
+    "min-viewport-height": null,
+    "flex": null,
+    "flex-grow": null,
+    "flex-shrink": null,
+    "flex-wrap": null,
+    "gap": null,
+    "align-content": null,
+    "align-self": null,
+    "order": null,
+    "margin": null,
+    "margin-start": null,
+    "padding-x": null,
+    "padding-end": null,
+    "padding-start": null,
+    "font-family": null,
+    "word-wrap": null, 
+    "text-opacity": null,
+    "bg-opacity": null,
+    "gradient": null,
+    "user-select": null,
+    "pointer-events": null,
+    "rounded-top": null,
+    "rounded-end": null,
+    "rounded-bottom": null,
+    "rounded-start": null,
+    "visibility": null,
+  )
+);

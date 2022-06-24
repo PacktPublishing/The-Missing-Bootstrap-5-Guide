@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shop – Brand Name</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-light bg-light navbar-expand-lg">
+        <div class="container">
+          <a href="index.html" class="navbar-brand">Brand Name</a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav mb-2 mb-lg-0 me-auto">
+              <li class="nav-item">
+                <a href="shop.html" class="nav-link active" aria-current="page">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+              </li>
+            </ul>
+            <form class="mb-3 mb-lg-0 me-lg-2">
+              <div class="input-group">
+                <input type="search" class="form-control" placeholder="Search text here" aria-label="Search products here">
+                <button type="submit" class="btn btn-secondary"><i class="bi-search"></i></button>
+              </div>
+            </form>
+            <div class="dropdown d-inline-block me-2">
+              <button type="button" class="btn btn-secondary dropdown-toggle" id="currencyDropdown" data-bs-toggle="dropdown" aria-expanded="false">USD $</button>
+              <div class="dropdown-menu" aria-labelledby="currencyDropdown">
+                <button type="button" class="dropdown-item">EUR €</button>
+                <button type="button" class="dropdown-item">GBP £</button>
+              </div>
+            </div>
+            <a href="wishlist.html" class="btn btn-secondary me-2">
+              <i class="bi-heart"></i>
+            </a>
+            <a href="cart.html" class="btn btn-primary">
+              <i class="bi-cart"></i>
+              (0)
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="bg-light py-5 mb-5">
+      <div class="container">
+        <h1 class="display-1 text-center mb-0">Shop</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasFilters">
+        <div class="offcanvas-header">
+          <h2 class="offcanvas-title h5 fw-bold text-uppercase" id="offcanvasFiltersLabel">Filters</h2>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <form>
+            <fieldset class="mb-3">
+              <legend class="h5">On sale</legend>
+              <div class="form-check form-switch">
+                <input type="checkbox" class="form-check-input" id="switchSaleOffcanvas">
+                <label class="form-check-label" for="switchSaleOffcanvas">Only show products on sale</label>
+              </div>
+            </fieldset>
+            <fieldset class="mb-3">
+              <legend class="h5">Tag</legend>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="checkTag1Offcanvas">
+                <label class="form-check-label" for="checkTag1Offcanvas">Tag</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="checkTag2Offcanvas">
+                <label class="form-check-label" for="checkTag2Offcanvas">Tag</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="checkTag3Offcanvas">
+                <label class="form-check-label" for="checkTag3Offcanvas">Tag</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="checkTag2Offcanvas">
+                <label class="form-check-label" for="checkTag4Offcanvas">Tag</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="checkTag3Offcanvas">
+                <label class="form-check-label" for="checkTag5Offcanvas">Tag</label>
+              </div>
+            </fieldset>
+            <fieldset class="mb-3">
+              <legend class="h5">Brand</legend>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="checkBrand1Offcanvas">
+                <label class="form-check-label" for="checkBrand1Offcanvas">Brand Name</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="checkBrand2Offcanvas">
+                <label class="form-check-label" for="checkBrand2Offcanvas">Brand Name</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="checkBrand3Offcanvas">
+                <label class="form-check-label" for="checkBrand3Offcanvas">Brand Name</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="checkBrand4Offcanvas">
+                <label class="form-check-label" for="checkBrand4Offcanvas">Brand Name</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="checkBrand5Offcanvas">
+                <label class="form-check-label" for="checkBrand5Offcanvas">Brand Name</label>
+              </div>
+            </fieldset>
+            <fieldset class="mb-3">
+              <legend class="h5">Rating</legend>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="checkRating1Offcanvas">
+                <label class="form-check-label" for="checkRating1Offcanvas">
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star-fill"></i>
+                </label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="checkRating2Offcanvas">
+                <label class="form-check-label" for="checkRating2Offcanvas">
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star-fill"></i>
+                </label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="checkRating3Offcanvas">
+                <label class="form-check-label" for="checkRating3Offcanvas">
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star-fill"></i>
+                </label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="checkRating4Offcanvas">
+                <label class="form-check-label" for="checkRating4Offcanvas">
+                  <i class="bi-star-fill"></i>
+                  <i class="bi-star-fill"></i>
+                </label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="checkRating5Offcanvas">
+                <label class="form-check-label" for="checkRating5Offcanvas">
+                  <i class="bi-star-fill"></i>
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="mb-3">
+              <legend class="h5">Price range</legend>
+              <div class="d-flex align-items-center">
+                <div class="input-group input-group-sm">
+                  <span class="input-group-text" id="priceRangeMinOffcanvas">$</span>
+                  <input type="text" class="form-control" placeholder="Min" aria-label="Min" aria-describedby="priceRangeMin">
+                </div>
+                <span class="mx-1">-</span>
+                <div class="input-group input-group-sm">
+                  <span class="input-group-text" id="priceRangeMaxOffcanvas">$</span>
+                  <input type="text" class="form-control" placeholder="Max" aria-label="Max" aria-describedby="priceRangeMax">
+                </div>
+              </div>
+            </fieldset>
+            <button type="submit" class="btn btn-sm btn-primary">Apply filters</button>
+            <button type="reset" class="btn btn-sm btn-secondary">Reset</button>
+          </form>
+        </div>
+      </div>
+      <div class="d-flex justify-content-end mb-3">
+        <button type="button" class="btn btn-secondary me-auto d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilters" aria-controls="offcanvasFilters">Filter</button>
+        <form class="d-flex align-items-center">
+          <label for="selectSort" class="me-2">Sort by:</label>
+          <select class="form-select w-auto me-md-3" aria-label="Sort by:" id="selectSort">
+            <option value="name" selected>Name</option>
+            <option value="popularity">Popularity</option>
+            <option value="price">Price</option>
+            <option value="rating">Rating</option>
+          </select>
+        </form>
+        <div class="btn-group d-none d-md-inline-flex" role="group" aria-label="Change layout">
+          <button type="button" class="btn btn-outline-secondary active">
+            <span class="visually-hidden">Grid</span>
+            <i class="bi-grid"></i>
+          </button>
+          <button type="button" class="btn btn-outline-secondary">
+            <span class="visually-hidden">List</span>
+            <i class="bi-list"></i>
+          </button>
+        </div>
+      </div>
+      <div class="d-lg-flex justify-content-lg-between">
+        <nav aria-label="Breadcrumb navigation">
+          <ol class="breadcrumb mb-2 mb-lg-0">
+            <li class="breadcrumb-item"><a href="#">Shop</a></li>
+            <li class="breadcrumb-item"><a href="#">Category</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Subcategory</li>
+          </ol>
+        </nav>
+        <div class="text-lg-end mb-2 mb-lg-0">Product 1-12 out of 60</div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4 col-xxl-3 d-none d-lg-block">
+          <aside class="sticky-top pt-lg-3 pb-lg-5">
+            <div class="card">
+              <h2 class="card-header h5 fw-bold text-uppercase">Filters</h2>
+              <form class="card-body">
+                <fieldset class="mb-3">
+                  <legend class="h5">On sale</legend>
+                  <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="switchSale">
+                    <label class="form-check-label" for="switchSale">Only show products on sale</label>
+                  </div>
+                </fieldset>
+                <fieldset class="mb-3">
+                  <legend class="h5">Tag</legend>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="checkTag1">
+                    <label class="form-check-label" for="checkTag1">Tag</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="checkTag2">
+                    <label class="form-check-label" for="checkTag2">Tag</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="checkTag3">
+                    <label class="form-check-label" for="checkTag3">Tag</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="checkTag4">
+                    <label class="form-check-label" for="checkTag4">Tag</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="checkTag5">
+                    <label class="form-check-label" for="checkTag5">Tag</label>
+                  </div>
+                </fieldset>
+                <fieldset class="mb-3">
+                  <legend class="h5">Brand</legend>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="checkBrand1">
+                    <label class="form-check-label" for="checkBrand1">Brand Name</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="checkBrand2">
+                    <label class="form-check-label" for="checkBrand2">Brand Name</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="checkBrand3">
+                    <label class="form-check-label" for="checkBrand3">Brand Name</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="checkBrand4">
+                    <label class="form-check-label" for="checkBrand4">Brand Name</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="checkBrand5">
+                    <label class="form-check-label" for="checkBrand5">Brand Name</label>
+                  </div>
+                </fieldset>
+                <fieldset class="mb-3">
+                  <legend class="h5">Rating</legend>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="checkRating1">
+                    <label class="form-check-label" for="checkRating1">
+                      <i class="bi-star-fill"></i>
+                      <i class="bi-star-fill"></i>
+                      <i class="bi-star-fill"></i>
+                      <i class="bi-star-fill"></i>
+                      <i class="bi-star-fill"></i>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="checkRating2">
+                    <label class="form-check-label" for="checkRating2">
+                      <i class="bi-star-fill"></i>
+                      <i class="bi-star-fill"></i>
+                      <i class="bi-star-fill"></i>
+                      <i class="bi-star-fill"></i>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="checkRating3">
+                    <label class="form-check-label" for="checkRating3">
+                      <i class="bi-star-fill"></i>
+                      <i class="bi-star-fill"></i>
+                      <i class="bi-star-fill"></i>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="checkRating4">
+                    <label class="form-check-label" for="checkRating4">
+                      <i class="bi-star-fill"></i>
+                      <i class="bi-star-fill"></i>
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="checkRating5">
+                    <label class="form-check-label" for="checkRating5">
+                      <i class="bi-star-fill"></i>
+                    </label>
+                  </div>
+                </fieldset>
+                <fieldset class="mb-3">
+                  <legend class="h5">Price range</legend>
+                  <div class="d-flex align-items-center">
+                    <div class="input-group input-group-sm">
+                      <span class="input-group-text" id="priceRangeMin">$</span>
+                      <input type="text" class="form-control" placeholder="Min" aria-label="Min" aria-describedby="priceRangeMin">
+                    </div>
+                    <span class="mx-1">-</span>
+                    <div class="input-group input-group-sm">
+                      <span class="input-group-text" id="priceRangeMax">$</span>
+                      <input type="text" class="form-control" placeholder="Max" aria-label="Max" aria-describedby="priceRangeMax">
+                    </div>
+                  </div>
+                </fieldset>
+                <button type="submit" class="btn btn-sm btn-primary">Apply filters</button>
+                <button type="reset" class="btn btn-sm btn-secondary">Reset</button>
+              </form>
+            </div>
+          </aside>
+        </div>
+        <div class="col-lg-8 col-xxl-9 pt-lg-3 mb-5">
+          <div class="row g-4 mb-4">
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-success">
+                    <i class="bi-check-circle"></i>
+                    In stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2">
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-secondary" id="addToWishlistDropdown1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi-heart"></i><span class="visually-hidden">Add to wishlist</span></button>
+                        <div class="dropdown-menu" aria-labelledby="addToWishlistDropdown1">
+                          <h6 class="dropdown-header">Select wishlist</h6>
+                          <button type="button" class="dropdown-item">Wishlist #1</button>
+                          <button type="button" class="dropdown-item">Wishlist #2</button>
+                          <button type="button" class="dropdown-item">Wishlist #3</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-success">
+                    <i class="bi-check-circle"></i>
+                    In stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2">
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-secondary" id="addToWishlistDropdown2" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi-heart"></i><span class="visually-hidden">Add to wishlist</span></button>
+                        <div class="dropdown-menu" aria-labelledby="addToWishlistDropdown2">
+                          <h6 class="dropdown-header">Select wishlist</h6>
+                          <button type="button" class="dropdown-item">Wishlist #1</button>
+                          <button type="button" class="dropdown-item">Wishlist #2</button>
+                          <button type="button" class="dropdown-item">Wishlist #3</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-success">
+                    <i class="bi-check-circle"></i>
+                    In stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2">
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-secondary" id="addToWishlistDropdown3" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi-heart"></i><span class="visually-hidden">Add to wishlist</span></button>
+                        <div class="dropdown-menu" aria-labelledby="addToWishlistDropdown3">
+                          <h6 class="dropdown-header">Select wishlist</h6>
+                          <button type="button" class="dropdown-item">Wishlist #1</button>
+                          <button type="button" class="dropdown-item">Wishlist #2</button>
+                          <button type="button" class="dropdown-item">Wishlist #3</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-success">
+                    <i class="bi-check-circle"></i>
+                    In stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2">
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-secondary" id="addToWishlistDropdown4" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi-heart"></i><span class="visually-hidden">Add to wishlist</span></button>
+                        <div class="dropdown-menu" aria-labelledby="addToWishlistDropdown4">
+                          <h6 class="dropdown-header">Select wishlist</h6>
+                          <button type="button" class="dropdown-item">Wishlist #1</button>
+                          <button type="button" class="dropdown-item">Wishlist #2</button>
+                          <button type="button" class="dropdown-item">Wishlist #3</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-success">
+                    <i class="bi-check-circle"></i>
+                    In stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2">
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-secondary" id="addToWishlistDropdown5" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi-heart"></i><span class="visually-hidden">Add to wishlist</span></button>
+                        <div class="dropdown-menu" aria-labelledby="addToWishlistDropdown5">
+                          <h6 class="dropdown-header">Select wishlist</h6>
+                          <button type="button" class="dropdown-item">Wishlist #1</button>
+                          <button type="button" class="dropdown-item">Wishlist #2</button>
+                          <button type="button" class="dropdown-item">Wishlist #3</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-success">
+                    <i class="bi-check-circle"></i>
+                    In stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2">
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-secondary" id="addToWishlistDropdown6" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi-heart"></i><span class="visually-hidden">Add to wishlist</span></button>
+                        <div class="dropdown-menu" aria-labelledby="addToWishlistDropdown6">
+                          <h6 class="dropdown-header">Select wishlist</h6>
+                          <button type="button" class="dropdown-item">Wishlist #1</button>
+                          <button type="button" class="dropdown-item">Wishlist #2</button>
+                          <button type="button" class="dropdown-item">Wishlist #3</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-warning">
+                    <i class="bi-exclamation-circle"></i>
+                    Only few in stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2">
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-secondary" id="addToWishlistDropdown7" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi-heart"></i><span class="visually-hidden">Add to wishlist</span></button>
+                        <div class="dropdown-menu" aria-labelledby="addToWishlistDropdown7">
+                          <h6 class="dropdown-header">Select wishlist</h6>
+                          <button type="button" class="dropdown-item">Wishlist #1</button>
+                          <button type="button" class="dropdown-item">Wishlist #2</button>
+                          <button type="button" class="dropdown-item">Wishlist #3</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-warning">
+                    <i class="bi-exclamation-circle"></i>
+                    Only few in stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2">
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-secondary" id="addToWishlistDropdown8" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi-heart"></i><span class="visually-hidden">Add to wishlist</span></button>
+                        <div class="dropdown-menu" aria-labelledby="addToWishlistDropdown8">
+                          <h6 class="dropdown-header">Select wishlist</h6>
+                          <button type="button" class="dropdown-item">Wishlist #1</button>
+                          <button type="button" class="dropdown-item">Wishlist #2</button>
+                          <button type="button" class="dropdown-item">Wishlist #3</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-warning">
+                    <i class="bi-exclamation-circle"></i>
+                    Only few in stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2">
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-secondary" id="addToWishlistDropdown9" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi-heart"></i><span class="visually-hidden">Add to wishlist</span></button>
+                        <div class="dropdown-menu" aria-labelledby="addToWishlistDropdown9">
+                          <h6 class="dropdown-header">Select wishlist</h6>
+                          <button type="button" class="dropdown-item">Wishlist #1</button>
+                          <button type="button" class="dropdown-item">Wishlist #2</button>
+                          <button type="button" class="dropdown-item">Wishlist #3</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-danger">
+                    <i class="bi-x-circle"></i>
+                    Out of stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2" disabled>
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-secondary" id="addToWishlistDropdown10" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi-heart"></i><span class="visually-hidden">Add to wishlist</span></button>
+                        <div class="dropdown-menu" aria-labelledby="addToWishlistDropdown10">
+                          <h6 class="dropdown-header">Select wishlist</h6>
+                          <button type="button" class="dropdown-item">Wishlist #1</button>
+                          <button type="button" class="dropdown-item">Wishlist #2</button>
+                          <button type="button" class="dropdown-item">Wishlist #3</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-danger">
+                    <i class="bi-x-circle"></i>
+                    Out of stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2" disabled>
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-secondary" id="addToWishlistDropdown11" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi-heart"></i><span class="visually-hidden">Add to wishlist</span></button>
+                        <div class="dropdown-menu" aria-labelledby="addToWishlistDropdown11">
+                          <h6 class="dropdown-header">Select wishlist</h6>
+                          <button type="button" class="dropdown-item">Wishlist #1</button>
+                          <button type="button" class="dropdown-item">Wishlist #2</button>
+                          <button type="button" class="dropdown-item">Wishlist #3</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-danger">
+                    <i class="bi-x-circle"></i>
+                    Out of stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2" disabled>
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <div class="dropdown">
+                        <button type="button" class="btn btn-secondary" id="addToWishlistDropdown12" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi-heart"></i><span class="visually-hidden">Add to wishlist</span></button>
+                        <div class="dropdown-menu" aria-labelledby="addToWishlistDropdown12">
+                          <h6 class="dropdown-header">Select wishlist</h6>
+                          <button type="button" class="dropdown-item">Wishlist #1</button>
+                          <button type="button" class="dropdown-item">Wishlist #2</button>
+                          <button type="button" class="dropdown-item">Wishlist #3</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <nav aria-label="Navigate products in shop">
+            <ul class="pagination mb-0">
+              <li class="page-item disabled">
+                <span class="page-link">Previous</span>
+              </li>
+              <li class="page-item active" aria-current="page">
+                <span class="page-link">
+                  1 <span class="visually-hidden">(current)</span>
+                </span>
+              </li>
+              <li class="page-item"><a href="#" class="page-link">2</a></li>
+              <li class="page-item"><a href="#" class="page-link">3</a></li>
+              <li class="page-item"><a href="#" class="page-link">4</a></li>
+              <li class="page-item"><a href="#" class="page-link">5</a></li>
+              <li class="page-item"><a href="#" class="page-link">Next</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-light">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-sm-6 col-lg-3">
+            <h6>Quick links</h6>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="wishlist.html">Wishlist</a></li>
+              <li><a href="cart.html">Cart</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <h6>Information</h6>
+            <ul class="list-unstyled">
+              <li><a href="faq.html">Frequently Asked Questions</a></li>
+              <li><a href="shipping.html">Shipping</a></li>
+              <li><a href="returns.html">Returns</a></li>
+              <li><a href="terms-of-service.html">Terms of Service</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <h6>Follow us</h6>
+            <ul class="list-unstyled">
+              <li><i class="bi-facebook text-primary"></i> <a href="#">Facebook</a></li>
+              <li><i class="bi-instagram text-primary"></i> <a href="#">Instagram</a></li>
+              <li><i class="bi-twitter text-primary"></i> <a href="#">Twitter</a></li>
+              <li><i class="bi-youtube text-primary"></i> <a href="#">YouTube</a></li>
+              <li><i class="bi-linkedin text-primary"></i> <a href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <h6>Contact</h6>
+            <address>
+              <strong>Brand Name</strong><br>
+              Steet Name 123<br>
+              ZIP code and city<br>
+              <i class="bi-telephone text-primary"></i> <a href="tel:+1234567890">(123) 456-7890</a><br>
+              <i class="bi-envelope text-primary"></i> <a href="mailto:info@domain.com">info@brandname.com</a>
+            </address>
+          </div>
+        </div>
+        <div class="text-center">&copy; 2022 Brand Name. All rights reserved.</div>
+      </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+// Customize the left border of the alert component
+.alert {
+  border-left: ($spacer * .5) solid;
+}
+
+// Customize the background color and bottom border of the header of the offcanvas component
+.offcanvas-header {
+  background-color: $card-cap-bg;
+  border-bottom: $card-border-width solid $card-border-color;
+}
+
+// Add z-index to get the right position along the z-axis
+.toast-container {
+  z-index: $zindex-fixed;
+}
+
+// Set the width of the .progress-bar so we can use the transition effect when adding width utility classes
+.progress-bar {
+  width: 0;
+}
+
+// Create a custom jumbotron component that extends various Bootstrap 5 classes
+.jumbotron {
+  @extend .bg-light, .py-5, .mb-5;
+}
+.jumbotron-heading {
+  @extend .container, .display-1, .text-center, .mb-0;
+}
+
+// Create a custom quote component that extends various Bootstrap 5 classes
+.quote {
+  @extend .blockquote;
+}
+.quote-icon {
+  @extend .text-secondary, .float-start, .fs-1, .lh-1, .mt-1, .me-2, .border-top, .border-start, .border-2, .border-secondary, .p-1;
+}
+
+// Create a custom summary border component that extends border and spacing utilities
+.summary-border {
+  @extend .border-bottom, .border-2, .border-light, .mb-4, .pb-4, .border-bottom-md-0, .border-end-md, .border-md-2, .pb-md-0, .mb-md-0, .border-bottom-xl, .border-end-xl-0, .border-xl-2, .pb-xl-4, .mb-xl-4, .border-bottom, .border-2, .border-light, .mb-4, .pb-4, .border-bottom-md-0, .border-end-md, .border-md-2, .pb-md-0, .mb-md-0, .border-bottom-xl, .border-end-xl-0, .border-xl-2, .pb-xl-4, .mb-xl-4;
+}
+
+// Dark color theme
+@include color-scheme(dark) {
+  // Body color
+  body {
+    background-color: $dark;
+    color: $light;
+  }
+  // Color utilities
+  .bg-light {
+    background-color: $dark !important;
+  }
+  .bg-dark {
+    background-color: $gray-700 !important;
+  }
+  // Components
+  .accordion-button,
+  .accordion-item,
+  .card,
+  .list-group-item {
+    background-color: $dark;
+  }
+  .accordion-button,
+  .breadcrumb-item.active,
+  .figure-caption,
+  .list-group-item,
+  .navbar-light .navbar-brand,
+  .navbar-light .navbar-nav .nav-link {
+    color: $light;
+  }
+}

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Bootstrap 5</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body class="p-3">
+    <div class="accordion" id="accordionDefault">
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="headingDefaultOne">
+					<button type="button" class="accordion-button" data-bs-toggle="collapse" data-bs-target="#collapseDefaultOne" aria-expanded="true" aria-controls="collapseDefaultOne">
+						Accordion Item #1
+					</button>
+				</h2>
+				<div id="collapseDefaultOne" class="accordion-collapse collapse show" aria-labelledby="headingDefaultOne" data-bs-parent="#accordionDefault">
+					<div class="accordion-body">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis posuere consequat. Nulla fermentum sodales augue, vitae ornare eros ornare quis. Donec lectus est, congue eu risus quis, tempus sagittis nunc. Donec blandit accumsan augue eu bibendum. Suspendisse pretium facilisis sapien, ac dignissim leo. Phasellus fermentum nulla eget quam congue sagittis. Donec volutpat vel sapien sit amet lobortis. Aenean non vulputate nunc, eu luctus libero.
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="headingDefaultTwo">
+					<button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseDefaultTwo" aria-expanded="false" aria-controls="collapseDefaultTwo">
+						Accordion Item #2
+					</button>
+				</h2>
+				<div id="collapseDefaultTwo" class="accordion-collapse collapse" aria-labelledby="headingDefaultTwo" data-bs-parent="#accordionDefault">
+					<div class="accordion-body">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis posuere consequat. Nulla fermentum sodales augue, vitae ornare eros ornare quis. Donec lectus est, congue eu risus quis, tempus sagittis nunc. Donec blandit accumsan augue eu bibendum. Suspendisse pretium facilisis sapien, ac dignissim leo. Phasellus fermentum nulla eget quam congue sagittis. Donec volutpat vel sapien sit amet lobortis. Aenean non vulputate nunc, eu luctus libero.
+					</div>
+				</div>
+			</div>
+			<div class="accordion-item">
+				<h2 class="accordion-header" id="headingDefaultThree">
+					<button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseDefaultThree" aria-expanded="false" aria-controls="collapseDefaultThree">
+						Accordion Item #3
+					</button>
+				</h2>
+				<div id="collapseDefaultThree" class="accordion-collapse collapse" aria-labelledby="headingDefaultThree" data-bs-parent="#accordionDefault">
+					<div class="accordion-body">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis posuere consequat. Nulla fermentum sodales augue, vitae ornare eros ornare quis. Donec lectus est, congue eu risus quis, tempus sagittis nunc. Donec blandit accumsan augue eu bibendum. Suspendisse pretium facilisis sapien, ac dignissim leo. Phasellus fermentum nulla eget quam congue sagittis. Donec volutpat vel sapien sit amet lobortis. Aenean non vulputate nunc, eu luctus libero.
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br>
+
+		<div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="img/1200x600-success.png" alt="First slide" class="d-block w-100">
+				</div>
+				<div class="carousel-item">
+					<img src="img/1200x600-danger.png" alt="Second slide" class="d-block w-100">
+				</div>
+				<div class="carousel-item">
+					<img src="img/1200x600-warning.png" alt="Third slide" class="d-block w-100">
+				</div>
+				<div class="carousel-item">
+					<img src="img/1200x600-info.png" alt="Fourth slide" class="d-block w-100">
+				</div>
+			</div>
+			<button type="button" class="carousel-control-prev" data-bs-target="#carouselControls" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button type="button" class="carousel-control-next" data-bs-target="#carouselControls" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+
+		<br>
+
+		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalHeaderFooter">Open modal</button>
+		<div class="modal fade" id="modalHeaderFooter" tabindex="-1" aria-labelledby="modalHeaderFooterTitle" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modalHeaderFooterTitle">Modal title</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In laoreet pellentesque lorem sed elementum. Suspendisse maximus convallis ex. Etiam eleifend velit leo.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">Action</button>
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../../../../bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

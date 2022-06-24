@@ -1,0 +1,12 @@
+.breadcrumb {
+  background-color: var(--bs-gray-300);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: 1rem;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+  padding-right: 1rem;
+  content: '·';
+}

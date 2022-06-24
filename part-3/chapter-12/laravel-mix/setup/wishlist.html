@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wishlist – Brand Name</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  </head>
+  <body id="wishlistPage">
+    <div class="toast-container position-fixed end-0 mt-3 me-3">
+      <div class="toast js-addAllToast" role="status" aria-live="polite" aria-atomic="true">
+        <div class="toast-header fw-bold">All added to cart</div>
+        <div class="toast-body">All products from wishlist were added to the cart.</div>
+      </div>
+      <div class="toast js-cartToast" role="status" aria-live="polite" aria-atomic="true">
+        <div class="toast-header fw-bold">Added to cart</div>
+        <div class="toast-body">Product Name was added to the cart.</div>
+      </div>
+      <div class="toast js-wishlistToast" role="status" aria-live="polite" aria-atomic="true">
+        <div class="toast-header fw-bold">Removed from wishlist</div>
+        <div class="toast-body">Product Name was removed from the wishlist.</div>
+      </div>
+    </div>
+    <header>
+      <nav class="navbar navbar-light bg-light navbar-expand-lg">
+        <div class="container">
+          <a href="index.html" class="navbar-brand">Brand Name</a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav mb-2 mb-lg-0 me-auto">
+              <li class="nav-item">
+                <a href="shop.html" class="nav-link">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+              </li>
+            </ul>
+            <form class="mb-3 mb-lg-0 me-lg-2">
+              <div class="input-group">
+                <input type="search" class="form-control" placeholder="Search text here" aria-label="Search products here">
+                <button type="submit" class="btn btn-secondary"><i class="bi-search"></i></button>
+              </div>
+            </form>
+            <div class="dropdown d-inline-block me-2">
+              <button type="button" class="btn btn-secondary dropdown-toggle" id="currencyDropdown" data-bs-toggle="dropdown" aria-expanded="false">USD $</button>
+              <div class="dropdown-menu" aria-labelledby="currencyDropdown">
+                <button type="button" class="dropdown-item">EUR €</button>
+                <button type="button" class="dropdown-item">GBP £</button>
+              </div>
+            </div>
+            <a href="wishlist.html" class="btn btn-secondary me-2">
+              <i class="bi-heart"></i>
+            </a>
+            <a href="cart.html" class="btn btn-primary">
+              <i class="bi-cart"></i>
+              (0)
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="jumbotron">
+      <h1 class="jumbotron-heading">Wishlist</h1>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-xxl-3 mb-3 mb-lg-0">
+          <aside class="sticky-top pt-lg-3">
+            <nav aria-label="Change Wishlist">
+              <div class="card">
+                <h2 class="card-header h5 fw-bold text-uppercase">Change Wishlist</h2>
+                <div class="list-group list-group-flush">
+                  <a href="#" class="list-group-item list-group-item-action active" aria-current="true">Wishlist #1</a>
+                  <a href="#" class="list-group-item list-group-item-action">Wishlist #2</a>
+                  <a href="#" class="list-group-item list-group-item-action">Wishlist #3</a>
+                  <button type="button" class="list-group-item list-group-item-action text-primary" data-bs-toggle="modal" data-bs-target="#modal"><i class="bi-plus-circle"></i> Create new wishlist</button>
+                </div>
+              </div>
+            </nav>
+            <button type="button" class="btn btn-primary mt-3 js-addAllToCart">Add all products to cart</button>
+          </aside>
+        </div>
+        <div class="col-lg-8 col-xxl-9 pt-lg-3 mb-5">
+          <div class="row g-3">
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-success">
+                    <i class="bi-check-circle"></i>
+                    In stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2 js-addToCart">
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <button type="button" class="btn btn-danger js-removeFromWishlist">
+                        <i class="bi-x-circle"></i><span class="visually-hidden">Remove from wishlist</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-success">
+                    <i class="bi-check-circle"></i>
+                    In stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2 js-addToCart">
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <button type="button" class="btn btn-danger js-removeFromWishlist">
+                        <i class="bi-x-circle"></i><span class="visually-hidden">Remove from wishlist</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-success">
+                    <i class="bi-check-circle"></i>
+                    In stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2 js-addToCart">
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <button type="button" class="btn btn-danger js-removeFromWishlist">
+                        <i class="bi-x-circle"></i><span class="visually-hidden">Remove from wishlist</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-success">
+                    <i class="bi-check-circle"></i>
+                    In stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2 js-addToCart">
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <button type="button" class="btn btn-danger js-removeFromWishlist">
+                        <i class="bi-x-circle"></i><span class="visually-hidden">Remove from wishlist</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-success">
+                    <i class="bi-check-circle"></i>
+                    In stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2 js-addToCart">
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <button type="button" class="btn btn-danger js-removeFromWishlist">
+                        <i class="bi-x-circle"></i><span class="visually-hidden">Remove from wishlist</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-success">
+                    <i class="bi-check-circle"></i>
+                    In stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2 js-addToCart">
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <button type="button" class="btn btn-danger js-removeFromWishlist">
+                        <i class="bi-x-circle"></i><span class="visually-hidden">Remove from wishlist</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-warning">
+                    <i class="bi-exclamation-circle"></i>
+                    Only few in stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2 js-addToCart">
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <button type="button" class="btn btn-danger js-removeFromWishlist">
+                        <i class="bi-x-circle"></i><span class="visually-hidden">Remove from wishlist</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-warning">
+                    <i class="bi-exclamation-circle"></i>
+                    Only few in stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2 js-addToCart">
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <button type="button" class="btn btn-danger js-removeFromWishlist">
+                        <i class="bi-x-circle"></i><span class="visually-hidden">Remove from wishlist</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-warning">
+                    <i class="bi-exclamation-circle"></i>
+                    Only few in stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2 js-addToCart">
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <button type="button" class="btn btn-danger js-removeFromWishlist">
+                        <i class="bi-x-circle"></i><span class="visually-hidden">Remove from wishlist</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-danger">
+                    <i class="bi-x-circle"></i>
+                    Out of stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2" disabled>
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <button type="button" class="btn btn-danger js-removeFromWishlist">
+                        <i class="bi-x-circle"></i><span class="visually-hidden">Remove from wishlist</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-danger">
+                    <i class="bi-x-circle"></i>
+                    Out of stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2" disabled>
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <button type="button" class="btn btn-danger js-removeFromWishlist">
+                        <i class="bi-x-circle"></i><span class="visually-hidden">Remove from wishlist</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+              <div class="card h-100">
+                <div class="position-relative">
+                  <img src="img/1600x900.png" alt="Product image" class="card-img-top">
+                  <div class="badge bg-info position-absolute top-0 end-0 mt-2 me-2">Tag</div>
+                </div>
+                <div class="card-body position-relative">
+                  <h2 class="h4"><a href="product.html" class="stretched-link">Product Name</a></h2>
+                  <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                  <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                  <div class="small position-absolute bottom-0 end-0 mb-2 me-3 text-danger">
+                    <i class="bi-x-circle"></i>
+                    Out of stock
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="fs-3 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary me-2" disabled>
+                        <i class="bi-cart-plus"></i><span class="visually-hidden">Add to cart</span>
+                      </button>
+                      <button type="button" class="btn btn-danger js-removeFromWishlist">
+                        <i class="bi-x-circle"></i><span class="visually-hidden">Remove from wishlist</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-light">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-sm-6 col-lg-3">
+            <h6>Quick links</h6>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="wishlist.html">Wishlist</a></li>
+              <li><a href="cart.html">Cart</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <h6>Information</h6>
+            <ul class="list-unstyled">
+              <li><a href="faq.html">Frequently Asked Questions</a></li>
+              <li><a href="shipping.html">Shipping</a></li>
+              <li><a href="returns.html">Returns</a></li>
+              <li><a href="terms-of-service.html">Terms of Service</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <h6>Follow us</h6>
+            <ul class="list-unstyled">
+              <li><i class="bi-facebook text-primary"></i> <a href="#">Facebook</a></li>
+              <li><i class="bi-instagram text-primary"></i> <a href="#">Instagram</a></li>
+              <li><i class="bi-twitter text-primary"></i> <a href="#">Twitter</a></li>
+              <li><i class="bi-youtube text-primary"></i> <a href="#">YouTube</a></li>
+              <li><i class="bi-linkedin text-primary"></i> <a href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <h6>Contact</h6>
+            <address>
+              <strong>Brand Name</strong><br>
+              Steet Name 123<br>
+              ZIP code and city<br>
+              <i class="bi-telephone text-primary"></i> <a href="tel:+1234567890">(123) 456-7890</a><br>
+              <i class="bi-envelope text-primary"></i> <a href="mailto:info@domain.com">info@brandname.com</a>
+            </address>
+          </div>
+        </div>
+        <div class="text-center">&copy; 2022 Brand Name. All rights reserved.</div>
+      </div>
+    </footer>
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitle">Create new wishlist</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <form>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Name of wishlist" aria-label="Name of wishlist" aria-describedby="createWishlistButton">
+                <button type="button" class="btn btn-primary" id="createWishlistButton">Create</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

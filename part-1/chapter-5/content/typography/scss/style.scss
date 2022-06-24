@@ -1,0 +1,92 @@
+// Required
+@import "../../../../../bootstrap/scss/functions";
+@import "../../../../../bootstrap/scss/variables";
+
+// Body styles
+$body-bg: $gray-100;
+$body-color: $gray-700;
+
+// Basic typography styles
+$font-family-base: 'Roboto', sans-serif;
+$font-size-base: 1.5rem;
+$line-height-base: 1.3;
+$line-height-sm: 1;
+
+// Link styles
+$link-color: $info;
+$link-decoration: none;
+$link-hover-color: shift-color($link-color, $link-shade-percentage);
+$link-hover-decoration: underline;
+
+// Heading styles
+$h1-font-size: $font-size-base * 3.5;
+$h2-font-size: $font-size-base * 3;
+$h3-font-size: $font-size-base * 2.5;
+$h4-font-size: $font-size-base * 2;
+$h5-font-size: $font-size-base * 1.5;
+$h6-font-size: $font-size-base;
+$headings-font-weight: $font-weight-bold;
+$headings-line-height: $line-height-sm;
+$headings-margin-bottom: $spacer;
+
+// Display styles
+$display-font-sizes: (
+  1: $h1-font-size * 1.5,
+  2: $h2-font-size * 1.5,
+  3: $h3-font-size * 1.5,
+  4: $h4-font-size * 1.5,
+  5: $h5-font-size * 1.5,
+  6: $h6-font-size * 1.5
+);
+$display-font-weight: $font-weight-light;
+$display-line-height: $headings-line-height;
+
+// Lead styles
+$lead-font-size: $font-size-base * 1.25;
+$lead-font-weight: $font-weight-light;
+
+// Required
+@import "../../../../../bootstrap/scss/maps";
+@import "../../../../../bootstrap/scss/mixins";
+@import "../../../../../bootstrap/scss/root";
+  
+// Optional Bootstrap CSS
+@import "../../../../../bootstrap/scss/reboot";
+@import "../../../../../bootstrap/scss/type";
+@import "../../../../../bootstrap/scss/images";
+@import "../../../../../bootstrap/scss/containers";
+@import "../../../../../bootstrap/scss/grid";
+@import "../../../../../bootstrap/scss/tables";
+@import "../../../../../bootstrap/scss/forms";
+@import "../../../../../bootstrap/scss/buttons";
+@import "../../../../../bootstrap/scss/transitions";
+@import "../../../../../bootstrap/scss/dropdown";
+@import "../../../../../bootstrap/scss/button-group";
+@import "../../../../../bootstrap/scss/nav";
+@import "../../../../../bootstrap/scss/navbar";
+@import "../../../../../bootstrap/scss/card";
+@import "../../../../../bootstrap/scss/accordion";
+@import "../../../../../bootstrap/scss/breadcrumb";
+@import "../../../../../bootstrap/scss/pagination";
+@import "../../../../../bootstrap/scss/badge";
+@import "../../../../../bootstrap/scss/alert";
+@import "../../../../../bootstrap/scss/progress";
+@import "../../../../../bootstrap/scss/list-group";
+@import "../../../../../bootstrap/scss/close";
+@import "../../../../../bootstrap/scss/toasts";
+@import "../../../../../bootstrap/scss/modal";
+@import "../../../../../bootstrap/scss/tooltip";
+@import "../../../../../bootstrap/scss/popover";
+@import "../../../../../bootstrap/scss/carousel";
+@import "../../../../../bootstrap/scss/spinners";
+@import "../../../../../bootstrap/scss/offcanvas";
+@import "../../../../../bootstrap/scss/placeholders";
+
+// Helpers
+@import "../../../../../bootstrap/scss/helpers";
+
+// Utilities
+@import "../../../../../bootstrap/scss/utilities";
+
+// Utilities API
+@import "../../../../../bootstrap/scss/utilities/api";

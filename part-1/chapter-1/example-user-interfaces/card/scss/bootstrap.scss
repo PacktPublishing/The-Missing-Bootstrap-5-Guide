@@ -1,0 +1,59 @@
+// Required
+@import "../bootstrap/scss/functions";
+
+// Default variable overrides
+// Color
+$primary: darkgreen;
+
+// Typograhy
+$font-size-base: 1.25rem;
+$headings-font-weight: 700;
+
+// Required
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/maps";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/root";
+
+// Variable value using existing variable
+// Card
+$card-cap-bg: $gray-100;
+$card-cap-color: $gray-800;
+$card-bg: $gray-100;
+$card-color: $gray-800;
+$card-title-spacer-y: $spacer;
+$card-border-width: $border-width * 2;
+$card-spacer-x: $spacer * 1.5;
+$card-spacer-y: $spacer * 1.5;
+$card-cap-padding-x: $spacer * 1.5;
+$card-cap-padding-y: $spacer * 1.5;
+$card-border-radius: $spacer * 2;
+$card-inner-border-radius: $spacer * 2;
+
+// Nav link
+$nav-link-padding-y: $spacer;
+$nav-link-padding-x: $spacer * 2;
+
+// List group
+$list-group-bg: $gray-100;
+$list-group-color: $gray-800;
+$list-group-item-padding-x: $spacer * 1.5;
+$list-group-item-padding-y: $spacer;
+
+// Optional Bootstrap CSS
+@import "../bootstrap/scss/reboot";
+@import "../bootstrap/scss/nav";
+@import "../bootstrap/scss/card";
+@import "../bootstrap/scss/list-group";
+
+// Custom styles
+.card-header-pills {
+  margin-left: 0;
+  margin-right: 0;
+}
+.card-title {
+  font-size: $h2-font-size;
+}
+.card-subtitle {
+  font-size: $h5-font-size;
+}

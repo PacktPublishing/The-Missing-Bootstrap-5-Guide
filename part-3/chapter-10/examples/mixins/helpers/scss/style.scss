@@ -1,0 +1,9 @@
+// Bootstrap 5
+@import "../bootstrap/scss/bootstrap.scss";
+
+h1 {
+  @include visually-hidden();
+}
+p {
+  @include text-truncate();
+}

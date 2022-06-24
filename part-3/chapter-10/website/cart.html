@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shopping Cart - Brand Name</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="icons/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  </head>
+  <body id="cartPage">
+    <div class="toast-container position-fixed end-0 mt-3 me-3">
+      <div class="toast js-cartToast" role="status" aria-live="polite" aria-atomic="true">
+        <div class="toast-header fw-bold">Removed from cart</div>
+        <div class="toast-body">Product Name was removed from the cart.</div>
+      </div>
+    </div>
+    <header>
+      <nav class="navbar navbar-light bg-light navbar-expand-lg">
+        <div class="container">
+          <a href="index.html" class="navbar-brand">Brand Name</a>
+          <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav mb-2 mb-lg-0 me-auto">
+              <li class="nav-item">
+                <a href="shop.html" class="nav-link">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+              </li>
+            </ul>
+            <form class="mb-3 mb-lg-0 me-lg-2">
+              <div class="input-group">
+                <input type="search" class="form-control" placeholder="Search text here" aria-label="Search products here">
+                <button type="submit" class="btn btn-secondary"><i class="bi-search"></i></button>
+              </div>
+            </form>
+            <div class="dropdown d-inline-block me-2">
+              <button type="button" class="btn btn-secondary dropdown-toggle" id="currencyDropdown" data-bs-toggle="dropdown" aria-expanded="false">USD $</button>
+              <div class="dropdown-menu" aria-labelledby="currencyDropdown">
+                <button type="button" class="dropdown-item">EUR €</button>
+                <button type="button" class="dropdown-item">GBP £</button>
+              </div>
+            </div>
+            <a href="wishlist.html" class="btn btn-secondary me-2">
+              <i class="bi-heart"></i>
+            </a>
+            <a href="cart.html" class="btn btn-primary">
+              <i class="bi-cart"></i>
+              (0)
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="jumbotron">
+      <h1 class="jumbotron-heading">Cart</h1>
+    </div>
+    <div class="container">
+      <div class="progress mb-4" id="cartProgress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="00" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <ul class="nav nav-pills nav-justified mb-5" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button type="button" id="cartTabs-1" class="nav-link active disabled" data-bs-target="#cartTabs-pane-1" role="tab" aria-controls="cartTabs-pane-1" aria-selected="true">1. Shopping Cart</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button type="button" id="cartTabs-2" class="nav-link disabled" data-bs-target="#cartTabs-pane-2" role="tab" aria-controls="cartTabs-pane-2" aria-selected="false">2. Shipping Details</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button type="button" id="cartTabs-3" class="nav-link disabled" data-bs-target="#cartTabs-pane-3" role="tab" aria-controls="cartTabs-pane-3" aria-selected="false">3. Payment Options</button>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div id="cartTabs-pane-1" class="tab-pane fade show active" role="tabpanel" aria-labelledby="cartTabs-1">
+          <div class="row mb-5">
+            <div class="col-xl-8 mb-5 mb-xl-0">
+              <form id="shoppingCartForm">
+                <h2 class="mb-3 mb-xl-5">Shopping Cart</h2>
+                <div class="d-flex flex-column flex-md-row align-items-md-start border-bottom border-2 border-light mb-4 pb-4">
+                  <div class="d-flex align-items-start me-3 mb-3 mb-md-0 w-md-67 w-lg-75 w-xl-67 w-xxl-75">
+                    <img src="img/160x90.png" class="img-fluid me-3" alt="Product image">
+                    <div>
+                      <h3 class="h5 mb-1"><a href="product.html">Product Name</a></h3>
+                      <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                      <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                      <div class="fs-5 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    </div>
+                  </div>
+                  <div class="d-flex w-75 w-sm-50 w-md-33 w-lg-25 w-xl-33 w-xxl-25">
+                    <div class="input-group me-3 js-productQuantity">
+                      <button type="button" class="btn btn-secondary"><i class="bi-dash-circle"></i></button>
+                      <input type="text" class="form-control text-center" value="1" aria-label="Product quantity">
+                      <button type="button" class="btn btn-secondary"><i class="bi-plus-circle"></i></button>
+                    </div>
+                    <button type="button" class="btn btn-danger js-removeFromCart"><i class="bi-x-circle"></i></button>
+                  </div>
+                </div>
+                <div class="d-flex flex-column flex-md-row align-items-md-start border-bottom border-2 border-light mb-4 pb-4">
+                  <div class="d-flex align-items-start me-3 mb-3 mb-md-0 w-md-67 w-lg-75 w-xl-67 w-xxl-75">
+                    <img src="img/160x90.png" class="img-fluid me-3" alt="Product image">
+                    <div>
+                      <h3 class="h5 mb-1"><a href="product.html">Product Name</a></h3>
+                      <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                      <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                      <div class="fs-5 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    </div>
+                  </div>
+                  <div class="d-flex w-75 w-sm-50 w-md-33 w-lg-25 w-xl-33 w-xxl-25">
+                    <div class="input-group me-3 js-productQuantity">
+                      <button type="button" class="btn btn-secondary"><i class="bi-dash-circle"></i></button>
+                      <input type="text" class="form-control text-center" value="1" aria-label="Product quantity">
+                      <button type="button" class="btn btn-secondary"><i class="bi-plus-circle"></i></button>
+                    </div>
+                    <button type="button" class="btn btn-danger js-removeFromCart"><i class="bi-x-circle"></i></button>
+                  </div>
+                </div>
+                <div class="d-flex flex-column flex-md-row align-items-md-start border-bottom border-2 border-light mb-4 pb-4">
+                  <div class="d-flex align-items-start me-3 mb-3 mb-md-0 w-md-67 w-lg-75 w-xl-67 w-xxl-75">
+                    <img src="img/160x90.png" class="img-fluid me-3" alt="Product image">
+                    <div>
+                      <h3 class="h5 mb-1"><a href="product.html">Product Name</a></h3>
+                      <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                      <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices.</p>
+                      <div class="fs-5 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                    </div>
+                  </div>
+                  <div class="d-flex w-75 w-sm-50 w-md-33 w-lg-25 w-xl-33 w-xxl-25">
+                    <div class="input-group me-3 js-productQuantity">
+                      <button type="button" class="btn btn-secondary"><i class="bi-dash-circle"></i></button>
+                      <input type="text" class="form-control text-center" value="1" aria-label="Product quantity">
+                      <button type="button" class="btn btn-secondary"><i class="bi-plus-circle"></i></button>
+                    </div>
+                    <button type="button" class="btn btn-danger js-removeFromCart"><i class="bi-x-circle"></i></button>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Next</button>
+                <button type="reset" class="btn btn-danger">Cancel</button>
+              </form>
+            </div>
+            <div class="col-xl-4">
+              <h2 class="mb-3 mb-xl-5">Summary</h2>
+              <div class="border-bottom border-2 border-light mb-4 pb-4">
+                <div class="d-flex justify-content-between">
+                  <span>Subtotal</span>
+                  <span>$597</span>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <span>Tax (25%)</span>
+                  <span>$149.25</span>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between fw-bold">
+                <span class="text-uppercase">Total</span>
+                <span>$746.25</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="cartTabs-pane-2" class="tab-pane fade" role="tabpanel" aria-labelledby="cartTabs-2">
+          <div class="row mb-5">
+            <div class="col-xl-8 mb-5 mb-xl-0">
+              <form id="shippingForm" novalidate>
+                <h2 class="mb-3 mb-xl-5">Shipping Details</h2>
+                <fieldset class="border-bottom border-2 border-light mb-4 pb-4">
+                  <legend>Personal Details</legend>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label" for="email">Email address:</label>
+                      <input type="email" class="form-control" id="email" placeholder="name@domain.com" required>
+                      <p class="valid-feedback">Valid feedback text</p>
+                      <p class="invalid-feedback">Invalid feedback text</p>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label" for="phone">Phone number:</label>
+                      <input type="tel" class="form-control" id="phone" placeholder="(123)-456-789" required>
+                      <p class="valid-feedback">Valid feedback text</p>
+                      <p class="invalid-feedback">Invalid feedback text</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label" for="firstName">First name:</label>
+                      <input type="text" class="form-control" id="firstName" placeholder="Firstname" required>
+                      <p class="valid-feedback">Valid feedback text</p>
+                      <p class="invalid-feedback">Invalid feedback text</p>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                      <label class="form-label" for="lastName">Last name:</label>
+                      <input type="text" class="form-control" id="lastName" placeholder="Lastname" required>
+                      <p class="valid-feedback">Valid feedback text</p>
+                      <p class="invalid-feedback">Invalid feedback text</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-8 mb-3">
+                      <label class="form-label" for="address">Address:</label>
+                      <input type="text" class="form-control" id="address" placeholder="123 Street Name" required>
+                      <p class="valid-feedback">Valid feedback text</p>
+                      <p class="invalid-feedback">Invalid feedback text</p>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label class="form-label" for="apartment">Apartment or floor:</label>
+                      <input type="text" class="form-control" id="apartment" placeholder="B3, 4th Floor, or similar" required>
+                      <p class="valid-feedback">Valid feedback text</p>
+                      <p class="invalid-feedback">Invalid feedback text</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-8 col-md-6 mb-3">
+                      <label class="form-label" for="city">City:</label>
+                      <input type="text" class="form-control" id="city" placeholder="City" required>
+                      <p class="valid-feedback">Valid feedback text</p>
+                      <p class="invalid-feedback">Invalid feedback text</p>
+                    </div>
+                    <div class="col-4 col-md-2 mb-3">
+                      <label class="form-label" for="zip">Zip:</label>
+                      <input type="text" class="form-control" id="zip" placeholder="12345" required>
+                      <p class="valid-feedback">Valid feedback text</p>
+                      <p class="invalid-feedback">Invalid feedback text</p>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="country" class="form-label">Country:</label>
+                      <select class="form-select" aria-label="Country" id="country" required>
+                        <option hidden value="">Select country</option>
+                        <option value="country-1">Country one</option>
+                        <option value="country-2">Country two</option>
+                        <option value="country-3">Country three</option>
+                        <option value="country-4">Country four</option>
+                        <option value="country-5">Country five</option>
+                      </select>
+                      <p class="valid-feedback">Valid feedback text</p>
+                      <p class="invalid-feedback">Invalid feedback text</p>
+                    </div>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Shipping Method</legend>
+                  <div class="btn-group d-flex mb-3">
+                    <input type="radio" class="btn-check" name="shippingMethod" id="shippingMethodStandard" autocomplete="off" checked>
+                    <label class="btn btn-lg btn-outline-secondary" for="shippingMethodStandard">
+                      <div class="fw-bold">Standard Delivery ($5)</div>
+                      <div class="small">5-7 days</div>
+                    </label>
+                    <input type="radio" class="btn-check" name="shippingMethod" id="shippingMethodExpress" autocomplete="off">
+                    <label class="btn btn-lg btn-outline-secondary" for="shippingMethodExpress">
+                      <div class="fw-bold">Express Delivery ($10)</div>
+                      <div class="small">1-2 days</div>
+                    </label>
+                  </div>
+                  <div class="alert alert-info alert-dismissible fade show mb-3" role="alert">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close alert"></button>
+                    <p class="mb-0">Buy for $1000 to get free shipping. <a href="#" class="alert-link">Learn more</a>.</p>
+                  </div>
+                </fieldset>
+                <button type="submit" class="btn btn-primary">Next</button>
+                <button type="reset" class="btn btn-danger">Cancel</button>
+              </form>
+            </div>
+            <div class="col-xl-4">
+              <h2 class="mb-3 mb-xl-5">Summary</h2>
+              <div class="row">
+                <div class="col-md-8 col-xl-12">
+                  <div class="summary-border">
+                    <div class="d-flex mb-3">
+                      <div class="d-flex align-items-center me-3">
+                        <div class="fs-5 text-nowrap">1 &times;</div>
+                      </div>
+                      <img src="img/160x90.png" class="img-fluid me-3" alt="Product image">
+                      <div>
+                        <h3 class="h5 mb-1"><a href="product.html">Product Name</a></h3>
+                        <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                        <div class="fs-5 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                      </div>
+                    </div>
+                    <div class="d-flex mb-3">
+                      <div class="d-flex align-items-center me-3">
+                        <div class="fs-5 text-nowrap">1 &times;</div>
+                      </div>
+                      <img src="img/160x90.png" class="img-fluid me-3" alt="Product image">
+                      <div>
+                        <h3 class="h5 mb-1"><a href="product.html">Product Name</a></h3>
+                        <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                        <div class="fs-5 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                      </div>
+                    </div>
+                    <div class="d-flex">
+                      <div class="d-flex align-items-center me-3">
+                        <div class="fs-5 text-nowrap">1 &times;</div>
+                      </div>
+                      <img src="img/160x90.png" class="img-fluid me-3" alt="Product image">
+                      <div>
+                        <h3 class="h5 mb-1"><a href="product.html">Product Name</a></h3>
+                        <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                        <div class="fs-5 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xl-12">
+                  <div class="border-bottom border-2 border-light mb-4 pb-4">
+                    <div class="d-flex justify-content-between">
+                      <span>Subtotal</span>
+                      <span>$597</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span>Shipping (Standard Delivery)</span>
+                      <span>$5</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span>Tax (25%)</span>
+                      <span>$150.5</span>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between fw-bold">
+                    <span class="text-uppercase">Total</span>
+                    <span>$747.5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="cartTabs-pane-3" class="tab-pane fade" role="tabpanel" aria-labelledby="cartTabs-3">
+          <div class="row mb-5">
+            <div class="col-xl-8 mb-5 mb-xl-0">
+              <form id="paymentForm" novalidate>
+                <h2 class="mb-3 mb-xl-5">Payment Options</h2>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <fieldset>
+                      <div class="form-check d-flex align-items-center">
+                        <input type="radio" class="form-check-input me-2 mt-0" name="paymentMethod" id="paymentMethod1" checked>
+                        <label class="form-check-label fs-3" for="paymentMethod1"><i class="bi-credit-card"></i><span class="visually-hidden">Credit card</span></label>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4 mb-3">
+                          <label for="creditCardNetwork" class="form-label">Credit card network:</label>
+                          <select class="form-select" aria-label="Credit card network" id="creditCardNetwork" required>
+                            <option hidden value="">Select network</option>
+                            <option value="visa">Visa</option>
+                            <option value="mastercard">Mastercard</option>
+                            <option value="american-express">American Express</option>
+                            <option value="discover">Discover</option>
+                          </select>
+                          <p class="valid-feedback">Valid feedback text</p>
+                          <p class="invalid-feedback">Invalid feedback text</p>
+                        </div>
+                        <div class="col-md-8 mb-3">
+                          <label class="form-label" for="cardHolderName">Card holder name:</label>
+                          <input type="text" class="form-control" id="cardHolderName" placeholder="Firstname Lastname" required>
+                          <p class="valid-feedback">Valid feedback text</p>
+                          <p class="invalid-feedback">Invalid feedback text</p>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6 mb-3">
+                          <label class="form-label" for="cardNumber">Card number:</label>
+                          <input type="text" class="form-control" id="cardNumber" placeholder="1234 5678 1234 5678" required>
+                          <p class="valid-feedback">Valid feedback text</p>
+                          <p class="invalid-feedback">Invalid feedback text</p>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                          <label class="form-label" for="expiryDate">Expiry date:</label>
+                          <input type="text" class="form-control" id="expiryDate" placeholder="12/34" required>
+                          <p class="valid-feedback">Valid feedback text</p>
+                          <p class="invalid-feedback">Invalid feedback text</p>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                          <label class="form-label d-flex justify-content-between" for="securityCode">Security code: <i class="bi-question-circle text-info" data-bs-toggle="tooltip" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices."></i></label>
+                          <input type="text" class="form-control" id="securityCode" placeholder="123" required>
+                          <p class="valid-feedback">Valid feedback text</p>
+                          <p class="invalid-feedback">Invalid feedback text</p>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <fieldset>
+                      <div class="form-check d-flex align-items-center">
+                        <input type="radio" class="form-check-input me-2 mt-0" name="paymentMethod" id="paymentMethod2">
+                        <label class="form-check-label fs-3" for="paymentMethod2"><i class="bi-paypal"></i><span class="visually-hidden">PayPal</span></label>
+                      </div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis velit quis sapien sollicitudin ultrices. Ut metus tortor, aliquet non rutrum ac, dapibus vehicula augue.</p>
+                    </fieldset>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary" id="paymentButton">Pay</button>
+                <button type="reset" class="btn btn-danger">Cancel</button>
+                <div class="collapse mt-3" id="paymentConfirmation">
+                  <div class="alert alert-success">
+                    <h3 class="alert-heading h4">Order confirmed!</h3>
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis posuere consequat. Nulla fermentum sodales augue, vitae ornare eros ornare quis. Donec lectus est, congue eu risus quis, tempus sagittis nunc.</p>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="col-xl-4">
+              <h2 class="mb-3 mb-xl-5">Summary</h2>
+              <div class="row">
+                <div class="col-md-8 col-xl-12">
+                  <div class="summary-border">
+                    <div class="d-flex mb-3">
+                      <div class="d-flex align-items-center me-3">
+                        <div class="fs-5 text-nowrap">1 &times;</div>
+                      </div>
+                      <img src="img/160x90.png" class="img-fluid me-3" alt="Product image">
+                      <div>
+                        <h3 class="h5 mb-1"><a href="product.html">Product Name</a></h3>
+                        <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                        <div class="fs-5 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                      </div>
+                    </div>
+                    <div class="d-flex mb-3">
+                      <div class="d-flex align-items-center me-3">
+                        <div class="fs-5 text-nowrap">1 &times;</div>
+                      </div>
+                      <img src="img/160x90.png" class="img-fluid me-3" alt="Product image">
+                      <div>
+                        <h3 class="h5 mb-1"><a href="product.html">Product Name</a></h3>
+                        <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                        <div class="fs-5 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                      </div>
+                    </div>
+                    <div class="d-flex">
+                      <div class="d-flex align-items-center me-3">
+                        <div class="fs-5 text-nowrap">1 &times;</div>
+                      </div>
+                      <img src="img/160x90.png" class="img-fluid me-3" alt="Product image">
+                      <div>
+                        <h3 class="h5 mb-1"><a href="product.html">Product Name</a></h3>
+                        <div class="text-uppercase fw-bold text-muted mb-1">Brand Name</div>
+                        <div class="fs-5 fw-bold lh-1">$199 <span class="fs-6 text-decoration-line-through text-muted">($299)</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 col-xl-12">
+                  <div class="border-bottom border-2 border-light mb-4 pb-4">
+                    <div class="d-flex justify-content-between">
+                      <span>Subtotal</span>
+                      <span>$597</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span>Shipping (Standard Delivery)</span>
+                      <span>$5</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <span>Tax (25%)</span>
+                      <span>$150.5</span>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between fw-bold">
+                    <span class="text-uppercase">Total</span>
+                    <span>$747.5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-light">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-sm-6 col-lg-3">
+            <h6>Quick links</h6>
+            <ul class="list-unstyled">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="wishlist.html">Wishlist</a></li>
+              <li><a href="cart.html">Cart</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <h6>Information</h6>
+            <ul class="list-unstyled">
+              <li><a href="faq.html">Frequently Asked Questions</a></li>
+              <li><a href="shipping.html">Shipping</a></li>
+              <li><a href="returns.html">Returns</a></li>
+              <li><a href="terms-of-service.html">Terms of Service</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <h6>Follow us</h6>
+            <ul class="list-unstyled">
+              <li><i class="bi-facebook text-primary"></i> <a href="#">Facebook</a></li>
+              <li><i class="bi-instagram text-primary"></i> <a href="#">Instagram</a></li>
+              <li><i class="bi-twitter text-primary"></i> <a href="#">Twitter</a></li>
+              <li><i class="bi-youtube text-primary"></i> <a href="#">YouTube</a></li>
+              <li><i class="bi-linkedin text-primary"></i> <a href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6 col-lg-3">
+            <h6>Contact</h6>
+            <address>
+              <strong>Brand Name</strong><br>
+              Steet Name 123<br>
+              ZIP code and city<br>
+              <i class="bi-telephone text-primary"></i> <a href="tel:+1234567890">(123) 456-7890</a><br>
+              <i class="bi-envelope text-primary"></i> <a href="mailto:info@domain.com">info@brandname.com</a>
+            </address>
+          </div>
+        </div>
+        <div class="text-center">&copy; 2022 Brand Name. All rights reserved.</div>
+      </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

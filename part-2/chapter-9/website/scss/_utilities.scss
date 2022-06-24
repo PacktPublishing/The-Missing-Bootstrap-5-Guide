@@ -1,0 +1,38 @@
+// Make sizing utilities for width responsive and add extra values
+$utilities: map-merge(
+  $utilities,
+  (
+    "width": (
+      property: width,
+      responsive: true,
+      class: w,
+      values: (
+        25: 25%,
+        33: 33%,
+        50: 50%,
+        67: 67%,
+        75: 75%,
+        100: 100%,
+        auto: auto
+      )
+    )
+  )
+);
+
+// Make border utilities for border-width, border-bottom and border-end responsive
+$utilities: map-merge(
+  $utilities, (
+    "border-width": map-merge(
+      map-get($utilities, "border-width"),
+      ( responsive: true ),
+    ),
+    "border-bottom": map-merge(
+      map-get($utilities, "border-bottom"),
+      ( responsive: true ),
+    ),
+    "border-end": map-merge(
+      map-get($utilities, "border-end"),
+      ( responsive: true ),
+    ),
+  )
+);

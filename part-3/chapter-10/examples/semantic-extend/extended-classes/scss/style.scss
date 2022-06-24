@@ -1,0 +1,52 @@
+// Bootstrap 5
+@import "../bootstrap/scss/bootstrap.scss";
+
+body {
+  @extend .container;
+}
+header { 
+  h1 {
+    @extend .display-1, .text-center;
+  }
+  p {
+    @extend .lead;
+  }
+}
+main {
+  @extend .row;
+  > nav {
+   @extend .col-lg-3;
+   > div {
+     @extend .list-group;
+     a {
+       @extend .list-group-item, .list-group-item-action;
+     }
+   }
+  }
+  > article {
+    @extend .col-lg-6;
+    h2 {
+      @extend .display-6;
+    }
+  }
+  > aside {
+    @extend .col-lg-3;
+    > div {
+      @extend .card;
+      > div {
+        @extend .card-body;
+        > a {
+          @extend .btn, .btn-primary;
+        }
+      }
+    }
+  }
+}
+footer {
+  > ul {
+    @extend .list-inline, .text-center;
+    > li {
+      @extend .list-inline-item;
+    }
+  }
+}

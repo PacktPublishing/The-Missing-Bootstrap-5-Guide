@@ -1,0 +1,10 @@
+// Customize the left border of the alert component
+.alert {
+  border-left: ($spacer * .5) solid;
+}
+
+// Customize the background color and bottom border of the header of the offcanvas component
+.offcanvas-header {
+  background-color: $card-cap-bg;
+  border-bottom: $card-border-width solid $card-border-color;
+}

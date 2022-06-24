@@ -1,0 +1,21 @@
+// Bootstrap 5
+@import "../bootstrap/scss/bootstrap.scss";
+
+.bg-primary-tinted {
+  background-color: tint-color($primary, 25%);
+}
+.bg-primary-shaded {
+  background-color: shade-color($primary, 25%);
+}
+.bg-primary-shifted-positive {
+  background-color: shift-color($primary, 25%);
+}
+.bg-primary-shifted-negative {
+  background-color: shift-color($primary, -25%);
+}
+
+@each $color, $value in $theme-colors {
+  .contrast-color-#{$color} {
+    color: color-contrast($value);
+  }
+}

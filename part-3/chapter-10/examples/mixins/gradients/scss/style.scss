@@ -1,0 +1,28 @@
+// Bootstrap 5
+$enable-gradients: true;
+@import "../bootstrap/scss/bootstrap.scss";
+
+.gradient-bg {
+  @include gradient-bg();
+}
+.gradient-x {
+  @include gradient-x();
+}
+.gradient-y {
+  @include gradient-y();
+}
+.gradient-directional {
+  @include gradient-directional();
+}
+.gradient-x-three-colors {
+  @include gradient-x-three-colors();
+}
+.gradient-y-three-colors {
+  @include gradient-y-three-colors();
+}
+.gradient-radial {
+  @include gradient-radial();
+}
+.gradient-striped {
+  @include gradient-striped();
+}

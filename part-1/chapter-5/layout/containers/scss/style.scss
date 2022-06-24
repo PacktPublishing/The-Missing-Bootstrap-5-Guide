@@ -1,0 +1,10 @@
+// Specify the container maximum widths
+$container-max-widths: (
+  sm: 300px,
+  md: 500px,
+  lg: 700px,
+  xl: 900px,
+  xxl: 1100px
+);
+
+@import "../../../../../bootstrap/scss/bootstrap.scss";

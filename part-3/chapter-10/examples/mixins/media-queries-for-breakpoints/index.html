@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Media queries for breakpoints</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="p-4">
+    <div class="up">@include media-breakpoint-up(lg): Visible on breakpoint sizes lg, xl and xxl</div>
+    <div class="down">@include media-breakpoint-down(md): Visible on breakpoint sizes xs and sm</div>
+    <div class="between">@include media-breakpoint-between(md, xl): Visible on breakpoint size md and lg</div>
+    <div class="only">@include media-breakpoint-only(sm): Visible on breakpoint size sm</div>
+  </body>
+</html>

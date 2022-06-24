@@ -1,0 +1,18 @@
+// Required
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/maps";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/root";
+
+// Modified variables
+$breadcrumb-bg: $gray-300;
+$breadcrumb-border-radius: $spacer;
+$breadcrumb-padding-y: $spacer;
+$breadcrumb-padding-x: $spacer;
+$breadcrumb-item-padding-x: $spacer;
+$breadcrumb-divider: quote("·");
+
+// Optional Bootstrap CSS
+@import "../bootstrap/scss/reboot";
+@import "../bootstrap/scss/breadcrumb";
