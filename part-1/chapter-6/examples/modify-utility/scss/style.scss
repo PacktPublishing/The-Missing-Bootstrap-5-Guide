@@ -1,0 +1,23 @@
+// Required
+@import "../../../../../bootstrap/scss/functions";
+@import "../../../../../bootstrap/scss/variables";
+@import "../../../../../bootstrap/scss/maps";
+@import "../../../../../bootstrap/scss/mixins";
+@import "../../../../../bootstrap/scss/root";
+@import "../../../../../bootstrap/scss/reboot";
+
+// Utilities
+@import "../../../../../bootstrap/scss/utilities";
+
+// Rename class for existing utility
+$utilities: map-merge(
+  $utilities, (
+    "margin-start": map-merge(
+      map-get($utilities, "margin-start"),
+      ( class: ml ),
+    )
+  )
+);
+
+// Utilities API
+@import "../../../../../bootstrap/scss/utilities/api";

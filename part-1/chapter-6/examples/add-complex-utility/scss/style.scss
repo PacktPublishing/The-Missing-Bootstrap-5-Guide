@@ -1,0 +1,34 @@
+// Required
+@import "../../../../../bootstrap/scss/functions";
+@import "../../../../../bootstrap/scss/variables";
+@import "../../../../../bootstrap/scss/maps";
+@import "../../../../../bootstrap/scss/mixins";
+@import "../../../../../bootstrap/scss/root";
+@import "../../../../../bootstrap/scss/reboot";
+
+// Utilities
+@import "../../../../../bootstrap/scss/utilities";
+
+// Generate complex opacity utilities
+$utilities: map-merge(
+  $utilities,
+  (
+    "opacity": (
+      property: opacity,
+      values: (
+        0: 0,
+        25: .25,
+        50: .5,
+        75: .75,
+        100: 1,
+      ),
+      class: o,
+      state: hover,
+      responsive: true,
+      print: true
+    )
+  )
+);
+
+// Utilities API
+@import "../../../../../bootstrap/scss/utilities/api";

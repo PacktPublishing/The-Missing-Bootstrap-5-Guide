@@ -1,0 +1,24 @@
+// Required
+@import "../../../../../bootstrap/scss/functions";
+@import "../../../../../bootstrap/scss/variables";
+@import "../../../../../bootstrap/scss/maps";
+@import "../../../../../bootstrap/scss/mixins";
+@import "../../../../../bootstrap/scss/root";
+@import "../../../../../bootstrap/scss/reboot";
+
+// Utilities
+@import "../../../../../bootstrap/scss/utilities";
+
+// Generate simple cursor utilities
+$utilities: map-merge(
+  $utilities,
+  (
+    "cursor": (
+      property: cursor,
+      values: auto context-menu copy grab help pointer wait
+    )
+  )
+);
+
+// Utilities API
+@import "../../../../../bootstrap/scss/utilities/api";

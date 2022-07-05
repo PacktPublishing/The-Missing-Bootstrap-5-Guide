@@ -1,0 +1,19 @@
+// Required
+@import "../../../../../bootstrap/scss/functions";
+@import "../../../../../bootstrap/scss/variables";
+@import "../../../../../bootstrap/scss/maps";
+@import "../../../../../bootstrap/scss/mixins";
+
+// Utilities
+@import "../../../../../bootstrap/scss/utilities";
+
+$utilities: (
+  "Font weight": (
+    property: font-weight,
+    values: 300 400 700,
+    class: fw
+  )
+);
+
+// Utilities API
+@import "../../../../../bootstrap/scss/utilities/api";
