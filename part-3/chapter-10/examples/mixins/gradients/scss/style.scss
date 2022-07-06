@@ -1,6 +1,6 @@
 // Bootstrap 5
 $enable-gradients: true;
-@import "../bootstrap/scss/bootstrap.scss";
+@import "../../../../../../bootstrap/scss/bootstrap.scss";
 
 .gradient-bg {
   @include gradient-bg();
