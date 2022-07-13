@@ -1,0 +1,71 @@
+// Required
+@import "../../../../bootstrap/scss/functions";
+
+// Default variable overrides
+@import "default-variable-overrides";
+
+// Required
+@import "../../../../bootstrap/scss/variables";
+
+// Variable value using existing variable
+@import "variable-value-using-variable";
+
+// Required
+@import "../../../../bootstrap/scss/maps";
+@import "../../../../bootstrap/scss/mixins";
+@import "../../../../bootstrap/scss/root";
+
+// Optional Bootstrap CSS
+@import "../../../../bootstrap/scss/reboot";
+@import "../../../../bootstrap/scss/type";
+@import "../../../../bootstrap/scss/images";
+@import "../../../../bootstrap/scss/containers";
+@import "../../../../bootstrap/scss/grid";
+@import "../../../../bootstrap/scss/tables";
+@import "../../../../bootstrap/scss/forms";
+@import "../../../../bootstrap/scss/buttons";
+@import "../../../../bootstrap/scss/transitions";
+@import "../../../../bootstrap/scss/dropdown";
+@import "../../../../bootstrap/scss/button-group";
+@import "../../../../bootstrap/scss/nav";
+@import "../../../../bootstrap/scss/navbar";
+@import "../../../../bootstrap/scss/card";
+@import "../../../../bootstrap/scss/accordion";
+@import "../../../../bootstrap/scss/breadcrumb";
+@import "../../../../bootstrap/scss/pagination";
+@import "../../../../bootstrap/scss/badge";
+@import "../../../../bootstrap/scss/alert";
+@import "../../../../bootstrap/scss/progress";
+@import "../../../../bootstrap/scss/list-group";
+@import "../../../../bootstrap/scss/close";
+@import "../../../../bootstrap/scss/toasts";
+@import "../../../../bootstrap/scss/modal";
+@import "../../../../bootstrap/scss/tooltip";
+// @import "../../../../bootstrap/scss/popover";
+@import "../../../../bootstrap/scss/carousel";
+@import "../../../../bootstrap/scss/spinners";
+@import "../../../../bootstrap/scss/offcanvas";
+// @import "../../../../bootstrap/scss/placeholders";
+
+// Helpers
+// @import "../../../../bootstrap/scss/helpers/clearfix";
+// @import "../../../../bootstrap/scss/helpers/colored-links";
+@import "../../../../bootstrap/scss/helpers/ratio";
+@import "../../../../bootstrap/scss/helpers/position";
+// @import "../../../../bootstrap/scss/helpers/stacks";
+@import "../../../../bootstrap/scss/helpers/visually-hidden";
+@import "../../../../bootstrap/scss/helpers/stretched-link";
+// @import "../../../../bootstrap/scss/helpers/text-truncation";
+// @import "../../../../bootstrap/scss/helpers/vr";
+
+// Utilities
+@import "../../../../bootstrap/scss/utilities";
+
+// Define utilities
+@import "utilities";
+
+// Utilities API
+@import "../../../../bootstrap/scss/utilities/api";
+
+// Own custom styles
+@import "custom-styles";
