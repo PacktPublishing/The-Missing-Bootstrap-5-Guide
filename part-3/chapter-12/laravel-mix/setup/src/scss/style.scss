@@ -6,11 +6,14 @@
 
 // Required
 @import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/root";
 
 // Variable value using existing variable
 @import "variable-value-using-variable";
+
+// Required
+@import "~bootstrap/scss/maps";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/root";
 
 // Optional Bootstrap CSS
 @import "~bootstrap/scss/reboot";
