@@ -53,7 +53,7 @@ With the following software and hardware list you can run all code files present
 
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://packt.link/yXP75).
 
-##Intructions about the code Examples
+## Intructions about the code Examples
 The source code is grouped according to the various parts and chapters of the book, and all source code is referenced by its relative path in the chapters.
 You will also find the latest version of Bootstrap 5 in the `bootstrap` folder and the latest version of Bootstrap Icons in the `bootstrap-icons` folder.
 All examples using the Bootstrap 5 source code and Bootstrap Icons references code found in these folders.
