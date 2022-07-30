@@ -2,7 +2,7 @@
 
 <a href="https://www.packtpub.com/product/the-missing-bootstrap-5-guide/9781801076432"><img src="https://static.packt-cdn.com/products/9781801076432/cover/smaller" alt="The Missing Bootstrap 5 Guide" height="256px" align="right"></a>
 
-This is the code repository for [React and React Native - Fourth Edition](https://www.packtpub.com/product/the-missing-bootstrap-5-guide/9781801076432), published by Packt.
+This is the code repository for [The Missing Bootstrap 5 Guide](https://www.packtpub.com/product/the-missing-bootstrap-5-guide/9781801076432), published by Packt.
 
 **Customize and extend Bootstrap 5 with Sass and JavaScript to create unique website designs**
 
