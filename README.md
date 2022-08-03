@@ -60,7 +60,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 **Note:** The source code for this book is the complete and final examples. The examples are not constructed for coding along like what is common for many video-based online courses. In the chapters of the book the various code examples are described and some times also the various steps to achieve the final result. After reading through a section and looking at the corresponding code examples, the full and working examples can then be studied and seen in action in the source code in this repository.
 
-### Related products
+## Related products
 * The Art of Micro Frontends [[Packt]](https://www.packtpub.com/product/the-art-of-micro-frontends/9781800563568) [[Amazon]](https://www.amazon.com/Art-Micro-Frontends-compositional-application/dp/1800563566)
 
 * A Frontend Web Developer’s Guide to Testing [[Packt]](https://www.packtpub.com/product/a-front-end-web-developer-s-guide-to-testing/9781803238319) [[Amazon]](https://www.amazon.com/Frontend-Web-Developers-Guide-Testing/dp/1803238313/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=)
