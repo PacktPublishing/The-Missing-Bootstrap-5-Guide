@@ -4,9 +4,9 @@
 
 This is the code repository for [The Missing Bootstrap 5 Guide](https://www.packtpub.com/product/the-missing-bootstrap-5-guide/9781801076432), published by Packt.
 
-**Customize and extend Bootstrap 5 with Sass and JavaScript to create unique website designs**
+**Customize and Extend Bootstrap 5 with Sass and JavaScript to Create Unique Website Designs**
 
-## What is this book about?
+## What is This Book About?
 Bootstrap is one of the world's most popular and easy-to-use frontend UI toolkits for building responsive websites, but few know how to get the most out of its vast range of components, utilities, JavaScript plugins, and other features. The Missing Bootstrap 5 Guide will help you customize Bootstrap 5 with Sass to achieve a layout that stands out from the crowd, enabling you to create something unique that doesn't look like it was created with Bootstrap.
 
 This book covers the following exciting features:
@@ -38,7 +38,7 @@ nav ul li a {
 }
 ```
 
-**Following is what you need for this book:**
+**Following is What You Need for This Book:**
 This book is for UI designers and developers who are familiar with HTML and have prior experience with Bootstrap. Frontend as well as backend developers using Bootstrap, who don't know how to code CSS but have a solid grasp on HTML, will also find this book useful. Experienced users of the default Bootstrap files can use this book to learn all about customization and other advanced features.
 
 With the following software and hardware list you can run all code files present in the book (Chapter 1-12).
@@ -53,14 +53,14 @@ With the following software and hardware list you can run all code files present
 
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://packt.link/yXP75).
 
-## About the code Examples
+## About the Code Examples
 * The source code is grouped according to the various parts and chapters of the book, and all source code is referenced by its relative path in the chapters.
 * You will also find the latest version of Bootstrap 5 in the `bootstrap` folder and the latest version of Bootstrap Icons in the `bootstrap-icons` folder.
 * All examples using the Bootstrap 5 source code and Bootstrap Icons references code found in these folders.
 
 **Note:** The source code for this book is the complete and final examples. The examples are not constructed for coding along like what is common for many video-based online courses. In the chapters of the book the various code examples are described and some times also the various steps to achieve the final result. After reading through a section and looking at the corresponding code examples, the full and working examples can then be studied and seen in action in the source code in this repository.
 
-## Related products
+## Related Products
 * The Art of Micro Frontends [[Packt]](https://www.packtpub.com/product/the-art-of-micro-frontends/9781800563568) [[Amazon]](https://www.amazon.com/Art-Micro-Frontends-compositional-application/dp/1800563566)
 
 * A Frontend Web Developer’s Guide to Testing [[Packt]](https://www.packtpub.com/product/a-front-end-web-developer-s-guide-to-testing/9781803238319) [[Amazon]](https://www.amazon.com/Frontend-Web-Developers-Guide-Testing/dp/1803238313/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=&sr=)
