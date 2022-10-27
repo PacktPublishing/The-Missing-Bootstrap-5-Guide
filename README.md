@@ -70,3 +70,7 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 **Jeppe Schaumburg Jensen**
 is an experienced frontend developer with a deep interest in teaching Bootstrap and other UI frameworks. He holds a master of science degree in information technology with a specialization in interaction design and user experience. Over the last few years, he has been successful in establishing himself as an independent Instructor by creating online courses on different frontend development topics for various online course providers. On Udemy, his courses on Bootstrap have achieved the “Bestseller” and “Highest rated” badges, with more than 25,000 students so far. Besides teaching, Jeppe is a Senior Software Engineer on the Design System Team at Siteimprove, a multinational and industry-leading Software-as-a-Service (SaaS) company.
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781801076432">https://packt.link/free-ebook/9781801076432 </a> </p>
